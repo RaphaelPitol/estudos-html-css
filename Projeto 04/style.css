@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*rem = unidade de mediada relativa
+    1 rem equivale a unidade relativa do 
+    navegador que é 16px
+
+    Para melhor utilizar a responsividade
+    não utilizar unidades de medidas fixa
+*/
+:root{
+    /*16px equivale a 100% da fonte do navegador
+    para encontrarmos a porcentagem de 62.5%
+    pegamos 100% dividido por 16px=6,25 x 10px = 62,5%
+    então 62,5% equivale a 10px*/
+    font-size: 62.5%;
+}
+
+
+ul {
+    list-style: none;
+}
+
+body {
+    background: #ECE9FD;
+    font-size: 1.6rem;
+    padding: 6.0rem 2.3rem 6.6rem;
+    font-family: 'Epilogue', sans-serif;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 4.0rem;
+    line-height: 4.8rem;
+
+    color: #090039;
+
+    margin-bottom: 1.5rem;
+}
+main{
+    max-width: 33.0rem;
+    margin: 0 auto;
+}
+
+/*first-child pega o primeiro "P" no main neste caso abaixo*/
+main p:first-child{
+    color: #7158ef;
+    /*letter-spacing= espaços entre as letras*/
+    letter-spacing: 3px;
+    /*text-transformer neste caso todas as letras maiusculas*/
+    text-transform: uppercase;
+    /*espaçamento entre as linhas*/
+    line-height: 3.2rem;
+    
+    margin-bottom: 1.7rem;
+    
+}
+/* o simbolo de + pega o elemento apos
+neste caso apos o h1 vem o p*/
+h1 + p{
+    line-height: 3.2rem;
+    color: rgba(10, 0, 57, 0.64);
+
+    margin-bottom: 3.2rem;
+}
+
+a {
+    color: #090039;
+    
+    text-decoration: none;
+}
+a:hover{
+    color: #09003971;
+    font-weight: bold;
+}
+
+ul {
+    margin-top: 7.2rem;
+}
+
+ul li{
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color: #090039;
+    max-width: 25.7rem;
+
+    display: flex;
+    /*o flex- start alinha no topo do elemento
+    flex-center alinha no centro do elemento
+    flex-end alinha embaixo*/
+    align-items: flex-start;
+
+    gap: 3.8rem;
+}
+
+ul li + li{
+    margin-top: 3.2rem;
+   }
+
+ul li span {
+    font-size: 7.2rem;
+    font-weight: 800;
+    line-height: 8.0rem;
+    letter-spacing: -2px;
+    color: #090039;
+}
+/* @media atua como um if ou uma condição que acontece quando
+oque esta dentro dos parentes acontece*/
+@media(min-width: 760px){
+    body{
+        padding: 8rem;
+    }
+   main{
+    display: flex;
+    gap: 10rem;
+    max-width: 1020px;
+   }
+
+   main > div{
+    max-width: 484px;
+   }
+
+   ul li{
+    gap: 5.3rem;
+    max-width: 450;
+    align-items: center;  
+   }
+   /*pega todos os li apos o primeiro li*/
+   ul li + li{
+    margin-top: 3.2rem;
+   }
+}
